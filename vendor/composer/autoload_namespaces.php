@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'openemr' => array($baseDir . '/'),
     'ZendXml\\' => array($vendorDir . '/zendframework/zendxml/library'),
     'Svg\\' => array($vendorDir . '/phenx/php-svg-lib/src'),
     'FontLib\\' => array($vendorDir . '/phenx/php-font-lib/src'),

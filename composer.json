@@ -37,6 +37,16 @@
             "library/sanitize.inc.php",
             "library/date_functions.php",
             "library/validation/validate_core.php"
+        ],
+        "psr-0": {
+            "openemr": ""
+        },
+        "classmap": [
+            "common",
+            "common/database",
+            "common/logging",
+            "entities",
+            "repositories"
         ]
     },
     "config": {

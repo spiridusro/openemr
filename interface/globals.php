@@ -192,6 +192,15 @@ require_once $GLOBALS['vendor_dir'] ."/autoload.php";
 // Include the version file
 require_once (dirname(__FILE__) . "/../version.php");
 
+// The logging level for common/logging/logger.php
+$GLOBALS["log_level"] = "DEBUG"; // (value can be DEBUG, INFO, WARN, or ERROR)
+
+// Should Doctrine run in "dev mode"?
+$GLOBALS["doctrine_dev_mode"] = false;
+
+// Should Doctrine make use of connection pooling?
+$GLOBALS["doctrine_connection_pooling"] = true;
+
 // Defaults for specific applications.
 $GLOBALS['weight_loss_clinic'] = false;
 $GLOBALS['ippf_specific'] = false;

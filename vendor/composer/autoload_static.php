@@ -91,6 +91,13 @@ class ComposerStaticInit22ddb69348c7ed922c96325249cef3d0
     );
 
     public static $prefixesPsr0 = array (
+        'o' => 
+        array (
+            'openemr' => 
+            array (
+                0 => __DIR__ . '/../..' . '/',
+            ),
+        ),
         'Z' => 
         array (
             'ZendXml\\' => 
@@ -3302,6 +3309,10 @@ class ComposerStaticInit22ddb69348c7ed922c96325249cef3d0
         'Zend\\XmlRpc\\Value\\Nil' => __DIR__ . '/..' . '/zendframework/zendframework/library/Zend/XmlRpc/Value/Nil.php',
         'Zend\\XmlRpc\\Value\\Struct' => __DIR__ . '/..' . '/zendframework/zendframework/library/Zend/XmlRpc/Value/Struct.php',
         'Zend\\XmlRpc\\Value\\Text' => __DIR__ . '/..' . '/zendframework/zendframework/library/Zend/XmlRpc/Value/Text.php',
+        'common\\database\\Auditor' => __DIR__ . '/../..' . '/common/database/auditor.php',
+        'common\\database\\Connector' => __DIR__ . '/../..' . '/common/database/connector.php',
+        'common\\logging\\Logger' => __DIR__ . '/../..' . '/common/logging/logger.php',
+        'entities\\Version' => __DIR__ . '/../..' . '/entities/version.php',
         'ntlm_sasl_client_class' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/ntlm_sasl_client.php',
         'phpmailerException' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
         'phpseclib\\Crypt\\AES' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/AES.php',
@@ -3328,6 +3339,7 @@ class ComposerStaticInit22ddb69348c7ed922c96325249cef3d0
         'phpseclib\\Net\\SSH2' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Net/SSH2.php',
         'phpseclib\\System\\SSH\\Agent' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php',
         'phpseclib\\System\\SSH\\Agent\\Identity' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent/Identity.php',
+        'repositories\\VersionRepository' => __DIR__ . '/../..' . '/repositories/version_repository.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
