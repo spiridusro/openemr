@@ -107,7 +107,8 @@ class PatientService
                    ON doc.id = cate_to_doc.document_id
                  JOIN categories cate
                    ON cate.id = cate_to_doc.category_id
-                WHERE cate.name LIKE ? and doc.foreign_id = ?";
+                WHERE cate.name LIKE ? and doc.foreign_id = ?
+             ORDER BY doc.id DESC";
 
         $result = sqlQuery($sql, array($GLOBALS['patient_photo_category_name'], $this->pid));
 

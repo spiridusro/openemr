@@ -65,7 +65,7 @@ RUN echo '<Directory "/var/www/html">'                      >> $CONF; \
     echo '  </Directory>'                                   >> $CONF; \
     echo '  <Directory "/var/www/html/sites/*/documents">'  >> $CONF; \
     echo '      order deny,allow'                           >> $CONF; \
-    echo '      Deny from all'                              >> $CONF; \
+    echo '      Allow from all'                             >> $CONF; \
     echo '  </Directory>'                                   >> $CONF; \
     echo '  <Directory "/var/www/html/sites/*/edi">'        >> $CONF; \
     echo '      order deny,allow'                           >> $CONF; \

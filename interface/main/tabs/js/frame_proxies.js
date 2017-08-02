@@ -54,6 +54,19 @@ left_nav.setPatient = function(pname, pid, pubpid, frname, str_dob)
     app_view_model.attendant_template_type('patient-data-template');
 };
 
+left_nav.refreshPicture = function()
+{
+    if(
+        (app_view_model.application_data.patient()!==null)
+        && (app_view_model.application_data.patient().pid()!==null)
+        && (app_view_model.application_data.patient().patient_picture()!==null))
+    {
+        app_view_model.application_data.patient().patient_picture_cache_bust.notifySubscribers();
+
+        return;
+    }
+};
+
 left_nav.setTherapyGroup = function(group_id, group_name){
 
     if(

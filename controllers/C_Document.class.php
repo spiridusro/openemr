@@ -163,6 +163,12 @@ class C_Document extends Controller
                     if ($rc) {
                         $error .= $rc . "\n";
                     } else {
+                        $ct = new CategoryTree(1);
+                        $categories = $ct->_id_name;
+                        if (isset($categories[$category_id]) && $categories[$category_id]['name'] == $GLOBALS['patient_photo_category_name']) {
+                            $this->assign("should_refresh_patient_image", true);
+                        }
+
                         $this->assign("upload_success", "true");
                     }
                     $sentUploadStatus[] = $d;

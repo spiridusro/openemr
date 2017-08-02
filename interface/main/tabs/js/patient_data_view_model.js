@@ -33,7 +33,9 @@ function patient_data_view_model(pname,pid,pubpid,str_dob)
     self.pid=ko.observable(pid);
     self.pubpid=ko.observable(pubpid);
     self.str_dob=ko.observable(str_dob);
+    self.patient_picture_cache_bust=ko.observable();
     self.patient_picture=ko.computed(function(){
+      self.patient_picture_cache_bust();
       return webroot_url + '/controller.php' +
              '?document&retrieve' +
              '&patient_id=' + pubpid +
@@ -42,7 +44,8 @@ function patient_data_view_model(pname,pid,pubpid,str_dob)
              '&original_file=true' +
              '&disable_exit=false' +
              '&show_original=true' +
-             '&context=patient_picture';
+             '&context=patient_picture' +
+             '&cache_bust=' + $.now();
     }, self);
 
     self.encounterArray=ko.observableArray();
